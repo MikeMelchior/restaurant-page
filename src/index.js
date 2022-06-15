@@ -71,7 +71,7 @@ content.appendChild(contactPage());
 
 let btn1 = document.querySelector('.header-btn-one');
 let btn2 = document.querySelector('.header-btn-two');
-let btn3 = document.querySelector('.header-btn.three');
+let btn3 = document.querySelector('.header-btn-three');
 const main = document.querySelector('.home-page');
 
 btn1.addEventListener('click', () => {
