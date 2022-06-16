@@ -2,6 +2,7 @@ export const header = (function() {
     const element = document.createElement('header');
     element.classList.add('header');
 
+
     const nav = document.createElement('nav');
     nav.classList.add('header-nav');
 
