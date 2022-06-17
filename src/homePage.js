@@ -29,7 +29,7 @@ export const homePage = (function() {
 
     const review = document.createElement('p');
     review.classList.add('review');
-    review.textContent = "insert some great testimonial here from someone who really enjoyed the food.";
+    review.textContent = "The search for my fav breakfast place stops at Eggcelent Breakfast Buffet!";
 
     const reviewer = document.createElement('p');
     reviewer.classList.add('reviewer');
