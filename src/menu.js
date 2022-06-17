@@ -16,7 +16,6 @@ const menuCard = function(text, price) {
     return element;
 };
 
-
 export const menuPage = (function() {
     const element = document.createElement('div');
     element.classList.add('main-content','menu');
@@ -26,9 +25,7 @@ export const menuPage = (function() {
     element.appendChild(menuCard('Burly Man Breakfast', '$9.50$'));
     element.appendChild(menuCard('Breakfast Burrito', '$4.99'));
     element.appendChild(menuCard('Omelette', '$5.99'));
-    element.appendChild(menuCard('Omelette', '$5.99'));
-
-
+    element.appendChild(menuCard('Western Omelette', '$6.50'));
 
     return {
         element: element,
