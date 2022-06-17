@@ -84,6 +84,7 @@ body, html {
     border-radius: 1rem;
 }
 
+/*HOME PAGE*/
     .title-container {
         height: 50%;
         width: 50%;
@@ -127,26 +128,46 @@ body, html {
         align-self: flex-end;
         padding-right: 16%;
     }
-    
+
+/*MENU PAGE*/
 div.menu {
     grid-template-rows: repeat(auto-fill, minmax(150px, 1fr));
 }
-.menu-card {
-    background: url('./egg.png');
-    background-size: 150px;
-    background-repeat: no-repeat;
-    height: 150px;
-    display: flex;
-    padding-left: 150px;
-    padding-top: 10px;
-    font-size: 2.5rem;
-    align-items: center;
-}
-.price {
-    margin-left: auto;
-    padding-right: 5%;
+    .menu-card {
+        background: url('./egg.png');
+        background-size: 150px;
+        background-repeat: no-repeat;
+        height: 150px;
+        display: flex;
+        padding-left: 150px;
+        padding-top: 10px;
+        font-size: 2.5rem;
+        align-items: center;
+    }
+    .price {
+        margin-left: auto;
+        padding-right: 5%;
+    }
+
+/*CONTACT PAGE*/
+.contact {
+    color: var(--darkgray);
+    text-align: center;
+    font-size: 2rem;
 }
 
+.locations {
+    font-size: 3rem;
+    place-self: center;
+    height: 200px;
+    margin-bottom: -125px;
+}
+
+.contact-card {
+    height: 200px;
+}
+
+/*FOOTER*/
 .footer {
     display: flex;
     justify-content: center;
