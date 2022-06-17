@@ -7,6 +7,7 @@
 :root {
     --eggYellow: #ffd23c;
     --eggWhite: #f5f5f5;
+    --darkgray: #464646;
 }
 
 * {
@@ -17,6 +18,7 @@
 }
 
 body, html {
+    height: 100%;
     display: flex;
     flex-direction: column;
     background: url('./bacon-gfca2303cb_1920.jpg') no-repeat center center fixed;
@@ -36,16 +38,15 @@ body, html {
     width: 100%;
     min-height: fit-content;
     height: 50px;
-    background-color: #ffffff99;
 
 }
 
 
 .header-nav {
     margin: auto;
-    width: fit-content;
-    height: 100%;
+    width: 100%;
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 10px;
     color:var(--eggYellow);
@@ -53,37 +54,37 @@ body, html {
     font-size: 100%;
 }
 
-.header-nav > button {
-    flex: 1;
-    color: var(--eggYellow);
-    background-color: var(--eggWhite);
-    font-size: max(2vw, 1rem);
-    text-shadow: 1px 0px black;
-    font-weight: 900;
-    width: 85px;
-    max-width: 20vw;
-    height: 45px;
-    border: 3px solid #464646;
-    border-radius: 5px;
-    cursor: pointer;
-}
+    .header-nav > button {
+        color: var(--eggYellow);
+        background-color: var(--eggWhite);
+        text-shadow: 1px 1px var(--darkgray);
+        font-size: max(1.5vw, 10px);
+        font-weight: 900;
+        width: 12%;
+        height: 65px;
+        border: 3px solid var(--darkgray);
+        border-radius: 5px;
+        cursor: pointer;
+    }
 
-.header-nav > button:hover {
-    transform: scale(1.03);
-    border: 3px solid #333;
-}
+    .header-nav > button:hover {
+        transform: scale(1.03);
+        border: 3px solid var(--darkgray);
+    }
 
-button.active-btn {
-    background: linear-gradient(90deg, var(--eggWhite), red);
-}
+    button.active-btn {
+        background: linear-gradient(90deg, var(--eggWhite), red);
+    }
 
 .main-content {
     place-self: center;
     display: grid;
-    grid-template-rows: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     height: 85%;
     width: 70%;
-    background-color: #ffffff99;
+    background-color: hsla(0, 0%, 100%, 0.8);
+    border: 1px solid var(--darkgray);
     border-radius: 1rem;
 }
 
@@ -94,26 +95,42 @@ button.active-btn {
         display: flex;
         justify-content: center;
         align-items: center;
-        border: 2px solid #464646;
+        border: 3px solid var(--darkgray);
         border-radius: 10px;
         background-color: var(--eggWhite);
         color: var(--eggYellow);
         font-size: max(1rem, 2vw);
-        text-shadow: 1px 0px #464646;
+        text-shadow: 1px 1px var(--darkgray);
     }
 
     .title-img {
+        grid-column: 1/2;
         height: 50px;
         width: auto;
         transform: rotate(45deg);
     }
 
     .testimonial-img {
-        grid-row: 2/4;
-        height: 350px;
+        grid-row: 2/5;
+        max-width: 40vw;
         width: auto;
         place-self: center;
     }
+    .testimonial {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        place-self: center;
+        text-align: center;
+        bottom: 175px;
+        width: 700px;
+        font-size: min(2rem, 3vw);
+        color: var(--darkgray);
+    }
+    p.reviewer {
+        align-self: flex-end;
+    }
+    
 
 
 
@@ -133,6 +150,7 @@ button.active-btn {
     min-height: 4vh;
     height: 40px;
     background-color: rgba(245, 245, 245, 0.6);
+    color: var(--darkgray);
 }
 
 /* .hidden {
