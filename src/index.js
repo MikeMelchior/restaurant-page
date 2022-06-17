@@ -26,20 +26,30 @@ main.appendChild(homePage.element);
 
 const homeBtn = document.querySelector('.header-btn-one');
 const menuBtn = document.querySelector('.header-btn-two');
+const contactBtn = document.querySelector('.header-btn-three');
 
 homeBtn.addEventListener('click', (e) => {
     homeBtn.classList.add('active-btn');
     menuBtn.classList.remove('active-btn');
+    contactBtn.classList.remove('active-btn');
+    main.firstChild.remove();
     main.appendChild(homePage.element);
-    main.removeChild(menuPage.element);
-
 });
-
 
 menuBtn.addEventListener('click', () => {
     menuBtn.classList.add('active-btn');
     homeBtn.classList.remove('active-btn');
+    contactBtn.classList.remove('active-btn');
+    main.firstChild.remove();
     main.appendChild(menuPage.element);
-    main.removeChild(homePage.element);
+    
+});
+
+contactBtn.addEventListener('click', () => {
+    contactBtn.classList.add('active-btn');
+    menuBtn.classList.remove('active-btn');
+    homeBtn.classList.remove('active-btn');
+    main.firstChild.remove();
+    main.appendChild(contactPage.element);
 });
 
